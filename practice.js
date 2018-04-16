@@ -85,13 +85,11 @@ var ruff = dog.bark();
 
 //Return mySum.
 
-function looper(arr){
-var mySum=0;
-for(i=0;i<=arr.length;i++){
-  if(arr[i]%2!==0||arr[i]>=100){
-    arr[i]+mySum;
+function looper(array){
+  var mySum=0
+  for(i=0;i<array.length;i++){
+   if(array[i]%2!==0||array[i]>=100){ mySum+=array[i]}
   }return mySum;
-}
 }
 
 //////////////////PROBLEM 7////////////////////
@@ -105,14 +103,14 @@ function math(num1, num2, callback) {
 //Write a function called add that takes in two parameters and
 //returns the result of adding them together.
 
-function add(param1, param2){
-  return param1+param2;
+function add(p1, p2){
+  return p1+p2;
 }
 
 //Now invoke math, passing in the numbers 3 and 4, and your add function,
 //storing the result in the variable mathSum.
 
-math(3,4,add())
+mathSum=math(3,4,add);
 
 //////////////////PROBLEM 8////////////////////
 
@@ -152,16 +150,16 @@ function pond() {
 //as strings.
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ["duck", "sailorDuck","rubberDuck","realDuck"];
+let globalScope = ["duck"];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = ["sailorDuck", "rubberDuck"];
+let bathroomScope = ["rubberDuck","duck","sailorDuck"];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = ["sailorDuck"];
+let bathtubScope = ["sailorDuck",'duck','rubberDuck'];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = ["realDuck"];
+let pondScope = ["realDuck",'duck'];
 
 //////////////////PROBLEM 10////////////////////
 
@@ -180,4 +178,4 @@ var innerFn = outerFn();
 
 //Now invoke innerFn and save the result to a variable called finalResult.
 
-var finalResult= innerFn;
+var finalResult= innerFn();
